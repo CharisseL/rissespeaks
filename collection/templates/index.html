@@ -1,7 +1,7 @@
 {% extends 'layouts/base.html' %}
-{% load staticfiles %}
+{% load humanize %}
 {% block title %}Home - {{ block.super }}{% endblock %}
 {% block content %}
 <h1>Original Work</h1>
-<p>Words and Photos by Charisse Lambert</p>
+<p>There are {{ number }} dogs! This is my name: {{ thing|slugify }}</p>
 {% endblock %}
