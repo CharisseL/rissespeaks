@@ -1,7 +1,9 @@
 {% extends 'layouts/base.html' %}
-{% load humanize %}
 {% block title %}Home - {{ block.super }}{% endblock %}
 {% block content %}
-<h1>Original Work</h1>
-<p>There are {{ number }} dogs! This is my name: {{ thing|slugify }}</p>
+    {% for story in storys %}
+    <h1>Original Work</h1>
+    <h2>{{ story.name }}</h2>
+    <p>{{ story.description }}</p>
+    {% endfor %}
 {% endblock %}

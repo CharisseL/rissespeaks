@@ -1,10 +1,9 @@
 from django.shortcuts import render
+from collection.models import Story
 
 # Create your views here.
 def index(request):
-    number = 4
-    thing = "Thing name"
+    posts = Post.objects.all()
     return render(request, 'index.html', {
-        'number': number,
-        'thing': thing,
+        'posts': posts,
     })
